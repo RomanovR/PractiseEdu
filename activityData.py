@@ -1,6 +1,6 @@
-import sqlite3
-import datetime
 import csv
+import datetime
+import sqlite3
 
 """ Установка промежутка,  в который собирается статистика """
 # - 7 hours
@@ -64,7 +64,11 @@ for i in range(len(stepsOut)):
 # print(stepsList)
 # print(len(stepsList))
 
-myFile = open('hrdata.csv', 'w')
+for i in range(len(hrList)):
+    if 2 < i < len(hrList) - 1:
+        hrList[i][1] = int((float(hrList[i - 1][1]) + float(hrList[i][1]) + float(hrList[i + 1][1])) / 3)
+
+myFile = open('hrdata_middle.csv', 'w')
 with myFile:
     writer = csv.writer(myFile)
     writer.writerows(hrList)

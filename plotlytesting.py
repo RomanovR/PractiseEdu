@@ -1,8 +1,8 @@
+import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import pandas as pd
 
-hrDf = pd.read_csv("hrdata.csv")
+hrDf = pd.read_csv("hrdata_middle.csv")
 
 stepsDf = pd.read_csv("stepsdata.csv")
 
