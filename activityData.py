@@ -64,8 +64,7 @@ for i in range(len(stepsOut)):
 # print(stepsList)
 # print(len(stepsList))
 
-sumTemp = 0
-
+"""How not to do"""
 for i in range(len(hrList)):
     if 10 < i < len(hrList) - 10:
         hrList[i][1] = int((float(hrList[i - 4][1]) + float(hrList[i - 3][1]) + float(hrList[i - 2][1]) + float(
