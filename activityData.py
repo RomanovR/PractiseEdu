@@ -64,9 +64,13 @@ for i in range(len(stepsOut)):
 # print(stepsList)
 # print(len(stepsList))
 
+sumTemp = 0
+
 for i in range(len(hrList)):
-    if 2 < i < len(hrList) - 1:
-        hrList[i][1] = int((float(hrList[i - 1][1]) + float(hrList[i][1]) + float(hrList[i + 1][1])) / 3)
+    if 10 < i < len(hrList) - 10:
+        hrList[i][1] = int((float(hrList[i - 4][1]) + float(hrList[i - 3][1]) + float(hrList[i - 2][1]) + float(
+            hrList[i - 1][1]) + float(hrList[i][1]) + float(hrList[i + 1][1]) + float(hrList[i + 2][1]) + float(
+            hrList[i + 3][1]) + float(hrList[i + 4][1])) / 9)
 
 myFile = open('hrdata_middle.csv', 'w')
 with myFile:
