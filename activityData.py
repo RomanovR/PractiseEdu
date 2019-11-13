@@ -5,7 +5,7 @@ import sqlite3
 """ Установка промежутка,  в который собирается статистика """
 # - 7 hours
 # Указание отметок
-timeStart = datetime.datetime(2019, 10, 21, 12, 40)
+timeStart = datetime.datetime(2019, 10, 21, 13, 37)
 timeEnd = datetime.datetime(2019, 10, 21, 16, 30)
 
 # Конвертирование в timestamp
@@ -65,13 +65,13 @@ for i in range(len(stepsOut)):
 # print(len(stepsList))
 
 """How not to do"""
-for i in range(len(hrList)):
+"""for i in range(len(hrList)):
     if 10 < i < len(hrList) - 10:
         hrList[i][1] = int((float(hrList[i - 4][1]) + float(hrList[i - 3][1]) + float(hrList[i - 2][1]) + float(
             hrList[i - 1][1]) + float(hrList[i][1]) + float(hrList[i + 1][1]) + float(hrList[i + 2][1]) + float(
             hrList[i + 3][1]) + float(hrList[i + 4][1])) / 9)
-
-myFile = open('hrdata_middle.csv', 'w')
+"""
+myFile = open('hrdata.csv', 'w')
 with myFile:
     writer = csv.writer(myFile)
     writer.writerows(hrList)
