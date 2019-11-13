@@ -2,7 +2,7 @@ import os.path
 from tkinter import *
 
 import activitydata
-import plotlytesting
+import showgraphs
 
 
 def check_read_db_event():
@@ -37,7 +37,7 @@ def check_read_db_event():
 
 def check_graph_file_event():
     if os.path.exists("hrdata.csv") and os.path.exists("stepsdata.csv"):
-        plotlytesting.draw_graph()
+        showgraphs.draw_graph()
     else:
         s_er = '''Не найден hrdata.csv или stepsdata.csv'''
         show_message(s_er)
