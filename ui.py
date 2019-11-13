@@ -1,7 +1,7 @@
 import os.path
 from tkinter import *
 
-import activityData
+import activitydata
 import plotlytesting
 
 
@@ -18,7 +18,7 @@ def check_read_db_event():
     if year in range(2013, 2099) and month in range(1, 12) and day in range(1, 31):
         if start_hour in range(0, 23) and end_hour in range(0, 23):
             if start_minute in range(0, 59) and end_minute in range(0, 59):
-                check = activityData.read_convert_db(year,
+                check = activitydata.read_convert_db(year,
                                                      month,
                                                      day,
                                                      start_hour,
