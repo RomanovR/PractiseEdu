@@ -5,7 +5,6 @@ import sqlite3
 
 def read_convert_db(year, month, day, start_hour, start_minute, end_hour, end_minute):
     """ Установка промежутка,  в который собирается статистика """
-    # - 7 hours
     # Указание отметок
     timeStart = datetime.datetime(year,
                                   month,
