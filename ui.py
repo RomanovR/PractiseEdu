@@ -39,14 +39,14 @@ def check_graph_file_event():
     if os.path.exists("hrdata.csv") and os.path.exists("stepsdata.csv"):
         showgraphs.draw_graph()
     else:
-        s_er = '''Не найден hrdata.csv или stepsdata.csv'''
+        s_er = '''Не найден hrdata.csv или stepsdata.csv. Нажмите кнопку "Поиск перерывов" для формирования таблиц в указанном временном промежутке. '''
         show_message(s_er)
 
 
 def show_message(text):
     error_file = Tk()
     m_error_file = Message(error_file,
-                           width=200,
+                           width=300,
                            text=text,
                            font="Helvetica 13")
     m_error_file.pack(expand=True, fill=BOTH)
